@@ -128,9 +128,9 @@ function add(c1){
       });
       console.log(result);
       if(result==false)
-       contactpersons.push(c1);
+       contactPersons.push(c1);
   }
-let contact4=new ContactPerson("Gaurav","kumar","dfgsfg","jamshedpur","jharkhand","831414","758954187","klmnop@gmail.com");
+let contact4=new ContactPerson("Naman","kumar","dfgsfg","jamshedpur","jharkhand","831414","758954187","klmnop@gmail.com");
 add(contact4);
 console.log(contactPersons.forEach(display));
 
@@ -151,3 +151,7 @@ console.log(contactpersonCiyt.forEach(display));
 // uc10 
 let numberOfContactsByCity=contactPersons.filter(checkCity).reduce(countNumberOfContact,0);
 console.log(numberOfContactsByCity);
+
+// uc11
+contactPersons.sort(function(c1,c2){ return c1.firstName.localeCompare(c2.firstName) });
+contactPersons.forEach(display);
