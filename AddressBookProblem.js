@@ -144,5 +144,6 @@ function findPerson(contactPerson){
   return contactPerson.firstName=="Gaurav";
 }
 console.log(contact.filter(findPerson).forEach(display));
-
-
+//uc9
+let contactpersonCiyt=contactPersons.filter(checkCity)
+console.log(contactpersonCiyt.forEach(display));
