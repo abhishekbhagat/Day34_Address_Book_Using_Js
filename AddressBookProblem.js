@@ -119,3 +119,20 @@ function countNumberOfContact(count){
 let numberOfContacts=contactPersons.reduce(countNumberOfContact,0);
 console.log(numberOfContacts);
 
+//uc7
+function add(c1){
+    var result=false;
+    contactPersons.forEach(function(contactPerson){
+          if(contactPerson.firstName==c1.firstName)
+               result= true;
+      });
+      console.log(result);
+      if(result==false)
+       contactpersons.push(c1);
+  }
+let contact4=new ContactPerson("Gaurav","kumar","dfgsfg","jamshedpur","jharkhand","831414","758954187","klmnop@gmail.com");
+add(contact4);
+console.log(contactPersons.forEach(display));
+
+
+
