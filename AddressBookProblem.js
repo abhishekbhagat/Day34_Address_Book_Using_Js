@@ -91,11 +91,18 @@ class ContactPerson {
 function display(contact){
     console.log(contact.toString());
 }
-let contactpersons=new Array();
+let contactPersons=new Array();
 let contact1 = new ContactPerson("Abhishek", "Bhagat", "katras", "dhanbad", "jharkhand", "828113", "123456789", "abh@gmail.com");
 let contact2=new ContactPerson("Naman","Kumar","dfgsfg","jamshedpur","jharkhand","831414","7209300456","klmnop@gmail.com");
 let contact3=new ContactPerson("Gaurav","Kumar","naginapuri","jamshedpur","jharkhand","832544","7909015420","xyz@gmail.com");
-contactpersons.push(contact1);
-contactpersons.push(contact2);
-contactpersons.push(contact3);
-console.log(contactpersons.forEach(display));
+contactPersons.push(contact1);
+contactPersons.push(contact2);
+contactPersons.push(contact3);
+console.log(contactPersons.forEach(display));
+
+//uc3
+let contactByperson=contactPersons.filter(findPerson);
+function findPerson(contactPerson){
+  return contactPerson.firstName=="Naman";
+}
+console.log(contactByperson.forEach(display));
