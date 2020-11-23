@@ -134,5 +134,15 @@ let contact4=new ContactPerson("Gaurav","kumar","dfgsfg","jamshedpur","jharkhand
 add(contact4);
 console.log(contactPersons.forEach(display));
 
+//uc8
+function checkCity(contact){
+    return contact.city=="jamshedpur";
+}
+let contact=contactPersons.filter(checkCity);
+
+function findPerson(contactPerson){
+  return contactPerson.firstName=="Gaurav";
+}
+console.log(contact.filter(findPerson).forEach(display));
 
 
