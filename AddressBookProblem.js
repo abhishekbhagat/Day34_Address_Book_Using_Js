@@ -147,3 +147,7 @@ console.log(contact.filter(findPerson).forEach(display));
 //uc9
 let contactpersonCiyt=contactPersons.filter(checkCity)
 console.log(contactpersonCiyt.forEach(display));
+
+// uc10 
+let numberOfContactsByCity=contactPersons.filter(checkCity).reduce(countNumberOfContact,0);
+console.log(numberOfContactsByCity);
