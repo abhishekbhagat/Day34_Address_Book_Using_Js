@@ -100,9 +100,16 @@ contactPersons.push(contact2);
 contactPersons.push(contact3);
 console.log(contactPersons.forEach(display));
 
-//uc3
+//uc4
 let contactByperson=contactPersons.filter(findPerson);
 function findPerson(contactPerson){
   return contactPerson.firstName=="Naman";
 }
 console.log(contactByperson.forEach(display));
+//uc5
+let index=contactPersons.map(contact=>contact.firstName)
+.indexOf("Naman");
+contactPersons.splice(index,1);
+console.log(contactPersons.forEach(display));
+
+
