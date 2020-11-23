@@ -54,7 +54,7 @@ class ContactPerson {
         return phoneNumber;
     }
     set phoneNumber(phoneNumber) {
-        let phoneRegex=RegExp('[1-9]{1}[0-9]{1}( )[1-9]{1}[0-9]{9}');
+        let phoneRegex=RegExp('[1-9]{1}[0-9]{1}[1-9]{1}[0-9]{9}');
         if (phoneRegex.test(phoneNumber)) {
             this._phoneNumber = phoneNumber;
         }
@@ -88,13 +88,14 @@ class ContactPerson {
         return "firstname=" + this.firstName + " lastName= " + this.lastName + "address = " + this.address + " city= " + this.city + " state = " + this.state + " zip =" + this.zip + "phone number = " + this.phoneNumber + " email = " + this.email;
     }
 }
+function display(contact){
+    console.log(contact.toString());
+}
+let contactpersons=new Array();
 let contact1 = new ContactPerson("Abhishek", "Bhagat", "katras", "dhanbad", "jharkhand", "828113", "123456789", "abh@gmail.com");
-console.log(contact1.toString());
-try{
-contact1.firstName="dk";
-console.log(contact1.toString());
-}
-catch(e){
-    console.error(e);
-}
-
+let contact2=new ContactPerson("Naman","Kumar","dfgsfg","jamshedpur","jharkhand","831414","7209300456","klmnop@gmail.com");
+let contact3=new ContactPerson("Gaurav","Kumar","naginapuri","jamshedpur","jharkhand","832544","7909015420","xyz@gmail.com");
+contactpersons.push(contact1);
+contactpersons.push(contact2);
+contactpersons.push(contact3);
+console.log(contactpersons.forEach(display));
