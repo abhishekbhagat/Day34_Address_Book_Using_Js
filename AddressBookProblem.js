@@ -111,5 +111,11 @@ let index=contactPersons.map(contact=>contact.firstName)
 .indexOf("Naman");
 contactPersons.splice(index,1);
 console.log(contactPersons.forEach(display));
+//uc6
 
+function countNumberOfContact(count){
+    return count+1;
+}
+let numberOfContacts=contactPersons.reduce(countNumberOfContact,0);
+console.log(numberOfContacts);
 
